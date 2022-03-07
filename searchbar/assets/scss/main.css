@@ -1,0 +1,250 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes image-grid {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes image-grid {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#0000ff), color-stop(#777777), color-stop(#777777), color-stop(#777777), color-stop(#777777), color-stop(#777777), color-stop(#777777), color-stop(#777777), color-stop(#777777), color-stop(#777777), to(#ff0000));
+  background: linear-gradient(to right, #0000ff, #777777, #777777, #777777, #777777, #777777, #777777, #777777, #777777, #777777, #ff0000);
+}
+
+#charactersList {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.character {
+  list-style-type: none;
+  background-color: #eaeaea;
+  border-radius: 3px;
+  padding: 10px 20px;
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  -webkit-transition: 800ms ease-in-out;
+  transition: 800ms ease-in-out;
+  position: relative;
+  height: 200px;
+  margin: 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.character:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  margin-bottom: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px -2px 2px black;
+          box-shadow: -2px -2px 2px black;
+  outline: black 1px solid;
+}
+
+.character > h1 {
+  position: absolute;
+  padding-left: 20px;
+}
+
+.character > h2 {
+  position: absolute;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+
+.character > p {
+  position: absolute;
+  padding: 100px;
+  padding-left: 20px;
+}
+
+.character > span {
+  position: absolute;
+  padding: 135px;
+  padding-left: 20px;
+}
+
+.character .outer {
+  position: relative;
+  max-height: 10vw;
+  max-width: 40vw;
+  height: 9.9vw;
+  padding: 0;
+  margin-left: 450px;
+  overflow: hidden;
+  -webkit-transition: 800ms ease-in-out;
+  transition: 800ms ease-in-out;
+  width: 20vw;
+  border-radius: 20px;
+}
+
+.character .outer .images {
+  left: -30vw;
+  height: 9.9vw;
+  width: 40vw;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "a b c d";
+}
+
+.character .outer .images .i1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+.character .outer .images .i1:hover .i2 {
+  opacity: 50%;
+}
+
+.character .outer .images .i1:hover .i3 {
+  opacity: 50%;
+}
+
+.character .outer .images .i1:hover .i4 {
+  opacity: 50%;
+}
+
+.character .outer .images .i2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: b;
+}
+
+.character .outer .images .i3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: c;
+}
+
+.character .outer .images .i4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: d;
+}
+
+.character .outer .images img {
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.character:hover > .outer > .images {
+  margin-left: 30vw;
+}
+
+.character:hover > .outer {
+  width: 40vw;
+}
+
+#images > #i1:hover {
+  background-color: #00000066;
+}
+
+#images > #i2:hover {
+  background-color: #00000066;
+}
+
+#images > #i3:hover {
+  background-color: #00000066;
+}
+
+#images > #i4:hover {
+  background-color: #00000066;
+}
+
+#searchBar {
+  width: 100%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#searchWrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#searchWrapper::after {
+  content: "🔍";
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.news {
+  height: 50px;
+  background-color: red;
+  overflow: hidden;
+}
+
+#characterListContainer {
+  width: 100%;
+  height: 75%;
+  top: 200px;
+  overflow: scroll;
+  position: absolute;
+}
+
+#characterListContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.searchtxt {
+  color: rgba(211, 211, 211, 0.87);
+  margin-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.116);
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

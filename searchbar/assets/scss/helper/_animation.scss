@@ -1,0 +1,10 @@
+@import "./variables";
+
+@keyframes image-grid {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 0px;
+  }
+}
